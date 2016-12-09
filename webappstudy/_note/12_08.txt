@@ -1,0 +1,19 @@
+챕터2- 5장
+removeClass  :  클래스 제거
+addClass  :  클래스 추가 (C 대문자!!)
+
+attr() = 속성을 써주면 속성의 값을 가져와줌
+
+챕터2- 6장
+val()  = value 값을 가져와줌.
+change() =  click이벤트, select box에만 씀(select 박스안의 옵션을 클릭했을 때 나타낼 값을 넣어주기 위함)
+
+챕터2- 7장
+resize = 사이즈 재설정 . . . . . . . . . .
+trigger = 윈도우가 걸려있는 이벤트중에 resize 이벤트를 자동으로 실행
+$(window)
+$().trigger()
+
+
+$(function(){})
+

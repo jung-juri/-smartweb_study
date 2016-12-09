@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>01_CSS스타일_적용해_보기</title>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<style>
+			html * { margin:0; padding:0; }
+			body span { color:red; font-size: 30px; }
+			li { margin:5px; list-style: none; border: 1px solid green; }
+			#wrapper {	margin:20px;	}
+			#el { margin-top:0px; background-color: #efefef; padding:15px; color:blue;	font-size:24px; }
+			#controller { margin:0; }
+			#input { height:30px; }
+			#input select { float: left; margin-right:5px; }
+			#input input { float:left; margin-right:5px; }
+		</style>
+		<script>
+			// $(document).ready(function(){
+			// 	var input = $('#input');
+			// 	var select = input.children('.css_prop');
+			// 	var inputText = input.children('.css_prop_value');
+			// 	var button = input.children('.button');
+			// 	var contents = $('#el');
+			//
+			// 	select.change(function(){
+			// 		var cssTypeName = $(this).val();
+			// 		if(cssTypeName != ''){
+			// 			inputText.val(contents.css(cssTypeName));
+			// 		}
+			// 	});
+			//
+			// 	button.click(function(){
+			// 		var cssTypeName = select.val();
+			// 		contents.css(cssTypeName, inputText.val());
+			// 	});
+			// });
+		$(document).ready(function(){
+			var prop_val; //변수선언
+
+			var selectEvent = function(){
+				prop_val = $(this).val(); // this : 현재 내가 선택한 이것의 val : value 값을 불러와줌
+				var css_val = $('#el').css(prop_val); // #el의 css 속성 중에 변수prop_val 에 해당하는 값을 알아와서 대입.
+				$('.css_prop_value').val(css_val); // css_val 값을 가지고와서 .css_prop_value에 표시
+			//$('.css_prop_value').attr('value',css_val); *이렇게 써도 동일한 결과*
+			}
+			//클릭이벤트(적용버튼)정의
+			var confirm = function(){
+				var css_val = $('.css_prop_value').val();
+				$('#el').css(prop_val,css_val); //css(속성,값)
+			}
+			//이벤트실행
+			$('select.css_prop').change(selectEvent);
+			$('.button').click(confirm); //클릭했을때 실행
+	})
+
+		</script>
+
+	</head>
+
+	<body>
+		<div id="wrapper">
+			<div id="controller">
+				<div id="input">
+					<select class="css_prop">
+						<option value="">CSS속성을 선택해 주세요.</option>
+						<option value="fontSize">font-size</option>
+						<option value="color">color</option>
+						<option value="backgroundColor">background-color</option>
+						<option value="margin">margin</option>
+						<option value="padding">padding</option>
+					</select>
+					<input class="css_prop_value" type="text" value="" />
+					<input class="button" type="button" value="적용"/>
+				</div>
+			</div>
+			<div id="el">
+				이곳에 CSS 스타일을 적용시켜 주세요.
+			</div>
+		</div>
+	</body>
+</html>

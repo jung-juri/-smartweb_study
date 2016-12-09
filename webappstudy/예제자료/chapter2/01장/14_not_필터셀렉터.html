@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<title>13_has_필터셀렉터</title>
+		<style>
+			html * { margin:0; padding:0; }
+			body span { color:red; font-size: 30px; }
+			div { border:1px solid green; margin:5px; }
+			li { border:1px solid blue; list-style: none; margin:5px; }
+		</style>
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script>
+			$(document).ready(function(){
+
+				// not 부분 제외
+				// $('#el>li:not(.not)').css('color','red');
+
+				// class="not", title="attr" 둘다제외
+				// var el = $('#el>li:not([title=attr],.not)');
+				// el.css('color','red');
+
+				// 두개 이상의 클래스와 아이디 선택, 다수 제외
+				$('#el>li:not([title=at],[title=ar],.not,.not2),.el>li:not([title=at],[title=ar],.not,.not2)').css('color','red');
+			});
+		</script>
+	</head>
+	<body>
+		<span>아이디가 el인 엘리먼트의 자식엘리먼트중 class값이 not인 엘리먼트를 제외하여 선택해주고 선택된 엘리먼트의 글자색을 변경해 주세요.</span>
+		<div>
+			<ul id="el">
+				<li>1(이부분을 선택해주세요)</li>
+				<li class="not2">2(제외)</li>
+				<li>3(이부분을 선택해주세요)</li>
+				<li class="not">4(제외)</li>
+				<li title="at">5(제외)</li>
+				<li>6(이부분을 선택해주세요)</li>
+				<li title="ar">7(제외)</li>
+				<li>8(이부분을 선택해주세요)</li>
+				<li>9(이부분을 선택해주세요)</li>
+			</ul>
+			<ul class="el">
+				<li>1(이부분을 선택해주세요)</li>
+				<li class="not2">2(제외)</li>
+				<li>3(이부분을 선택해주세요)</li>
+				<li class="not">4(제외)</li>
+				<li title="at">5(제외)</li>
+				<li>6(이부분을 선택해주세요)</li>
+				<li title="ar">7(제외)</li>
+				<li>8(이부분을 선택해주세요)</li>
+				<li>9(이부분을 선택해주세요)</li>
+			</ul>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+챕터2- 2장
+size, each 중요
+
+변수에 묶여있는경우에 
+el.eq().css(~~~)
+
+filter 형제요소
+ 
+slice
+el.slice 선택된 위치 제외 하고?
+
+size() = length
+
+
+index() = 몇번째 있는지
+
+each = 반복해서 무언가 해주는놈
+$('#wrap li').each    li 각각의
+
+$('#wrap li').each(function(i){console.log(i)}) for문과 같은 기능
+$('#wrap li').each(function(i){console.log($(this).text())} for문과 같은 기능
+
+챕터2- 3장
+1 제일중요,5,9 중요
+편한거 8
+
+childrun
+
