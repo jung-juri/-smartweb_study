@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submenu</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <style type="text/css">
+    
+        *{margin: 0;padding: 0;}
+        a{text-decoration:none;color:#000;}
+        ul,ol,dl{list-style:none;}
+        .menu{width:300px; border:1px #CCC solid;margin:0 auto;}
+        .menu>ul{border:1px #F00 solid; margin:20px;}
+        .menu ul ul{display:none;}
+        
+    </style>
+    
+    <script type="text/javascript" >
+        
+        $(function(){
+            $('.menu > ul > li').hover(function(){
+                $(this).children('ul').stop().show(1000)
+            },function(){
+                $(this).children('ul').stop().hide(1000)
+            })
+        })
+    </script>
+    
+</head>
+<body>
+    
+    <!--show-->
+    <!--hide-->
+    <!--toggle-->
+    <!--fadeIn-->
+    <!--fadeOut-->
+    <!--fadeToggle-->
+    <!--slideDown-->
+    <!--slideUp-->
+    <!--slideToggle-->
+    <!--toggleClass-->
+    
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="">menu</a>
+                <ul>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">menu</a>
+                <ul>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">menu</a>
+                <ul>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">menu</a>
+                <ul>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="">menu</a>
+                <ul>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                    <li><a href="">submenu</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    
+</body>
+</html>
