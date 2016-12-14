@@ -19,10 +19,12 @@
 
         $(function(){
             $('.menu > ul > li').hover(function(){
-                $(this).children('ul').stop().slideDown()
-            },function(){
-                $(this).children('ul').stop().slideUp()
-            })
+                $(this).children('ul').stop().toggle()
+            }
+            // ,function(){
+            //     $(this).children('ul').stop().slideUp()
+            // }
+            )
         })
 
         // $(function(){
@@ -46,7 +48,7 @@
 </head>
 <body>
 
-    <!--show-->
+    <!-- show-->
     <!--hide-->
     <!--toggle-->
     <!--fadeIn-->
@@ -55,7 +57,7 @@
     <!--slideDown-->
     <!--slideUp-->
     <!--slideToggle-->
-    <!--toggleClass-->
+    <!--toggleClass -->
 
     <div class="menu">
         <ul>
