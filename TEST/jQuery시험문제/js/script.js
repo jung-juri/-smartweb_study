@@ -9,3 +9,5 @@ $(function(){
 //1번정답---------
 
 //2번정답---------
+var sec = $('section .a-type').hegiht();
+console.log($('section .a-type').hegiht())

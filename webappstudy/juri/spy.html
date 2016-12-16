@@ -16,30 +16,30 @@
         $(document).ready(function(){
 
        //1안
-         // $('.menu a').click(function(){
-         //   var idx = $(this).index();
-         //   var move = $('.wrap div:eq('+idx+')').offset().top;
-         //   $('body,html').animate({
-         //      scrollTop:move
-         //   })
-         // })
+         $('.menu a').click(function(){
+           var idx = $(this).index();
+           var move = $('.wrap div:eq('+idx+')').offset().top;
+           $('body,html').animate({
+              scrollTop:move
+           })
+         })
 
 
 
          //2안
-         var a = [];
-         $('.wrap div').each(function(){
-           a.push($(this).offset().top)
-         })
-
-
-         $('.menu a').click(function(){
-           var idx = $(this).index();
-           $('body,html').animate({
-             scrollTop:a[idx]
-           })
-
-         })
+        //  var a = [];
+        //  $('.wrap div').each(function(){
+        //    a.push($(this).offset().top)
+        //  })
+         //
+         //
+        //  $('.menu a').click(function(){
+        //    var idx = $(this).index();
+        //    $('body,html').animate({
+        //      scrollTop:a[idx]
+        //    })
+         //
+        //  })
       })
   </script>
 
