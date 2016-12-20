@@ -16,7 +16,7 @@ $(function(){
     var spy = $('.content section').eq(idx).offset().top;
     $('body,html').stop().animate({
        scrollTop:spy
-    },500)
+    },501)
   })
 
 
