@@ -1,13 +1,27 @@
 //1번정답---------
+
+
 $(function(){
-  $('header > div > nav > ul > li > a').mouseover(function(){
-    $(this).addClass('hov')
-  }).mouseout(function(){
-    $(this).removeClass()
+  var headli = $('header nav li');
+  var idx;
+
+  headli.mouseenter(function(){
+    $(this).children().addClass('hov')
+  }).mouseleave(function(){
+    $(this).children().removeClass()
+  });
+
+  headli.click(function(){
+    idx = $(this).index();
+    var spy = $('.content section').eq(idx).offset().top;
+    $('body,html').stop().animate({
+       scrollTop:spy
+    },500)
   })
+
+
+
 })
 //1번정답---------
 
 //2번정답---------
-var sec = $('section .a-type').hegiht();
-console.log($('section .a-type').hegiht())

@@ -7,7 +7,7 @@ header h1{font-size:26px; margin-bottom:50px;margin:20px; text-align:center;}
 header nav ul{list-style-position: inside; list-style: none;}
 header nav li{line-height:150%; border-top:1px #EEE solid; /*padding:10px 20px;*/ }
 header nav li:first-child{border-top:none;}
-header nav li a{text-decoration: none; color:#000; display: block; padding:10px 20px;}
+header nav li a{text-decoration: none; color:#000; display: block; padding:10px 20px; transition:.3s;}
 .hov{color:#fff; background:#000;}
 
 div.content{height:100%;}
